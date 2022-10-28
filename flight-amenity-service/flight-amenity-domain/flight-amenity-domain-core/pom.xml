@@ -3,19 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>flight-amenity-system</artifactId>
+        <artifactId>flight-amenity-domain</artifactId>
         <groupId>com.airretailer</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flight-amenity-common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>flight-amenity-domain-core</artifactId>
 
-    <modules>
-        <module>flight-amenity-common-application</module>
-        <module>flight-amenity-common-domain</module>
-    </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.airretailer</groupId>
+            <artifactId>flight-amenity-common-domain</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

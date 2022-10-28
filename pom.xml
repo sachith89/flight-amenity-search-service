@@ -4,13 +4,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.airretailer</groupId>
-    <artifactId>flight-amenity-search-service</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <modules>
         <module>flight-amenity-common</module>
+        <module>flight-amenity-service</module>
+        <module>infrastructure</module>
     </modules>
 
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.7.5</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.airretailer</groupId>
+    <artifactId>flight-amenity-system</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -19,12 +28,51 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-common-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.airretailer</groupId>
+                <artifactId>flight-amenity-common-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -34,7 +82,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.version}</version>
                 <configuration>
-                    <release>1.8</release>
+                    <release>11</release>
                 </configuration>
             </plugin>
             <plugin>

@@ -9,12 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flight-amenity-common</artifactId>
+    <artifactId>flight-amenity-service</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>flight-amenity-common-application</module>
-        <module>flight-amenity-common-domain</module>
+        <module>flight-amenity-application</module>
+        <module>flight-amenity-dataaccess</module>
+        <module>flight-amenity-domain</module>
+        <module>flight-amenity-domain/flight-amenity-domain-core</module>
+        <module>flight-amenity-container</module>
     </modules>
 
 
