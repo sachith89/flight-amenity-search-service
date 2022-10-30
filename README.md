@@ -2,7 +2,7 @@
 
 ### JSON SERVER
 
->cd json-server
+>cd infrastructure/json-server
 
 >docker run -d -p 8002:80 --name ammserver -v {AbsolutePathToJsonFile}:/data/db.json clue/json-server
 
@@ -18,4 +18,11 @@ Example
 ### High-level Architecture
 
 ![](docs/highlevel-architecture.png)
+
+### Postgres Cluster
+
+>cd infrastructure/postgres
+
+>docker-compose -f "docker-compose-replication.yml"  up -d
+
 
