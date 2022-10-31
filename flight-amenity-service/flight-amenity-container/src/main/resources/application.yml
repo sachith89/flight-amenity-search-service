@@ -3,7 +3,7 @@ server:
 
 logging:
   level:
-    com.com.airretailer: DEBUG
+    com.airretailer: DEBUG
 
 spring:
   jpa:

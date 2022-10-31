@@ -14,11 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.airretailer</groupId>
-            <artifactId>flight-amenity-domain-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.airretailer</groupId>
-            <artifactId>flight-amenity-common-domain</artifactId>
+            <artifactId>flight-amenity-application-service</artifactId>
         </dependency>
         <dependency>
             <groupId>com.airretailer</groupId>

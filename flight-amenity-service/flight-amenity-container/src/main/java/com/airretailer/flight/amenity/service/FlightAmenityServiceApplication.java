@@ -7,8 +7,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableJpaRepositories(basePackages = { "com.airretailer.flight.amenity.service.dataaccess" })
 @EntityScan(basePackages = { "om.airretailer.flight.amenity.service.dataaccess"})
-@SpringBootApplication(scanBasePackages = "com.airretailer.flight.amenity.service")
-
+@SpringBootApplication(scanBasePackages = "com.airretailer")
 public class FlightAmenityServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(FlightAmenityServiceApplication.class, args);

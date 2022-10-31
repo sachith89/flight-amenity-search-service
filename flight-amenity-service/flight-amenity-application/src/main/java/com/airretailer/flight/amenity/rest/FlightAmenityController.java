@@ -1,10 +1,9 @@
 package com.airretailer.flight.amenity.rest;
 
 
+import com.airretailer.flight.amenity.domain.dto.FlightAmenityRequest;
 import com.airretailer.flight.amenity.domain.dto.CommonResponse;
-import com.airretailer.flight.amenity.domain.entity.Flight;
-import com.airretailer.flight.amenity.domain.service.FlightAmenityService;
-import com.airretailer.flight.amenity.dto.FlightAmenityResponse;
+import com.airretailer.flight.amenity.application.service.FlightAmenityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/api/v1/flight-amenity", produces = "application/vnd.api.v1+json")
+@RequestMapping(value = "/api/v1/flight-amenity")
 public class FlightAmenityController {
         private final FlightAmenityService flightAmenityService;
 
@@ -20,15 +19,15 @@ public class FlightAmenityController {
             this.flightAmenityService = flightAmenityService;
         }
 
-        @PostMapping("/")
+        @PostMapping()
         @ResponseStatus(code = HttpStatus.OK)
-        public ResponseEntity<CommonResponse> createFlight(@RequestBody Flight flight) {
+        public ResponseEntity<CommonResponse> createFlight(@RequestBody FlightAmenityRequest flight) {
             return new ResponseEntity<>(flightAmenityService.createFlight(flight), HttpStatus.OK);
         }
 
         @PutMapping("/")
         @ResponseStatus(code = HttpStatus.OK)
-        public ResponseEntity<CommonResponse> updateFlight(@RequestBody Flight flight) {
+        public ResponseEntity<CommonResponse> updateFlight(@RequestBody FlightAmenityRequest flight) {
             return new ResponseEntity<>(flightAmenityService.updateFlight(flight), HttpStatus.OK);
         }
 

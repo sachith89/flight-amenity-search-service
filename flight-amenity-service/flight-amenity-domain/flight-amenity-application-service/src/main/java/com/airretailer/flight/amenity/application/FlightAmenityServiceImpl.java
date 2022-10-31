@@ -1,19 +1,21 @@
-package com.airretailer.flight.amenity.application.service;
+package com.airretailer.flight.amenity.application;
 
+import com.airretailer.flight.amenity.domain.dto.FlightAmenityRequest;
+import com.airretailer.flight.amenity.application.service.FlightAmenityService;
 import com.airretailer.flight.amenity.domain.dto.CommonResponse;
 import com.airretailer.flight.amenity.domain.entity.Flight;
 import com.airretailer.flight.amenity.domain.valueobject.CabinType;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FlightAmenityServiceImpl implements com.airretailer.flight.amenity.domain.service.FlightAmenityService {
+public class FlightAmenityServiceImpl implements FlightAmenityService {
     @Override
-    public CommonResponse createFlight(Flight flight) {
+    public CommonResponse createFlight(FlightAmenityRequest flight) {
         return null;
     }
 
     @Override
-    public CommonResponse updateFlight(Flight flight) {
+    public CommonResponse updateFlight(FlightAmenityRequest flight) {
         return null;
     }
 
